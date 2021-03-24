@@ -1,0 +1,95 @@
+*,
+html {
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+:root {
+  --first-color: #051e3e;
+  --second-color: #251e3e;
+  --third-color: #451e3e;
+  --fourth-color: #651e3e;
+  --fifth-color: #851e3e;
+}
+
+body {
+  background-color: #dadada;
+}
+
+body > section {
+  width: 768px;
+  margin: 1rem auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  -webkit-box-shadow: -2px 0px 10px 0px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: -2px 0px 10px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: -2px 0px 10px 0px rgba(0, 0, 0, 0.33);
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+article#overview {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+article#overview img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 6rem;
+}
+article#overview div {
+  color: var(--third-color);
+  margin-left: 2rem;
+}
+article#overview div p {
+  line-height: 1.3rem;
+  margin-top: 1rem;
+}
+
+.outline {
+  background-color: var(--third-color);
+  padding: 1rem 2rem;
+  color: white;
+}
+
+#comingsoon {
+    text-align: center;
+}
+#runningquote {
+    margin-top: 5rem;
+}
+#runningquote blockquote {
+    color: var(--second-color);
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+#runningquote span {
+    font-size: 0.8rem;
+    color: #999999;
+    margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  body > section {
+    margin: 0;
+    width: 100%;
+  }
+  article#overview img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+  }
+}

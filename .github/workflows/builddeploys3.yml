@@ -40,6 +40,6 @@ jobs:
           aws s3 cp \
             --recursive \
             --region sa-east-1 \
-            ./src s3://chrisb.com.br
+            ./src s3://${{ secrets.AWS_BUCKET_NAME }}
 
       

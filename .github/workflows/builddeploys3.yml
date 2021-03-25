@@ -29,8 +29,8 @@ jobs:
       #- name: Test
       #  run: npm run test
 
-      #- name: Build
-      #  run: npm run build
+      - name: Generate
+        run: npm run generate
 
       - name: Deploy
         env:
@@ -40,6 +40,6 @@ jobs:
           aws s3 cp \
             --recursive \
             --region sa-east-1 \
-            ./src s3://${{ secrets.AWS_BUCKET_NAME }}
+            ./dist s3://${{ secrets.AWS_BUCKET_NAME }}
 
       

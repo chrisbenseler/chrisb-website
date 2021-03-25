@@ -35,6 +35,8 @@
 
     <SocialNetworks />
 
+    <Skills />
+
     <article id="comingsoon" class="outline">
       <h3>Want more? Coming soon...</h3>
     </article>
@@ -50,9 +52,11 @@
 
 <script>
 import SocialNetworks from "../components/SocialNetworks";
+import Skills from "../components/Skills";
 export default {
   components: {
-    SocialNetworks
+    SocialNetworks,
+    Skills
   },
   mounted() {
     window.dataLayer = window.dataLayer || [];
@@ -60,7 +64,6 @@ export default {
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-
     gtag("config", "G-Q0BYEJF81T");
   }
 };
@@ -117,10 +120,11 @@ article#overview div p {
 }
 
 #comingsoon {
+  margin-top: 2rem;
   text-align: center;
 }
 #runningquote {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 #runningquote blockquote {
   color: var(--second-color);

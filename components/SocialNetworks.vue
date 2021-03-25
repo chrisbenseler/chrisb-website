@@ -73,11 +73,11 @@ export default {};
 <style scoped>
 #social-networks {
   margin: 2rem 0 1rem;
+  padding: 0 1rem;
 }
 #social-networks h4 {
   font-size: 2rem;
   color: var(--fourth-color);
-  margin-left: 1rem;
   border-bottom: 1px solid var(--fourth-color);
   padding-bottom: 0.5rem;
 }

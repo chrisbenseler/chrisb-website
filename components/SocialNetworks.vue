@@ -1,6 +1,6 @@
 <template>
   <article id="social-networks">
-    <h4><i class="far fa-address-card"></i>Find me</h4>
+    <h4><i class="fas fa-fire-alt"></i>Find me</h4>
 
     <div>
       <a

@@ -14,4 +14,12 @@ html {
 body {
   background-color: #dadada;
 }
+
+:root {
+  --first-color: #051e3e;
+  --second-color: #251e3e;
+  --third-color: #451e3e;
+  --fourth-color: #651e3e;
+  --fifth-color: #851e3e;
+}
 </style>

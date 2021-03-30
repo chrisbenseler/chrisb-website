@@ -17,11 +17,9 @@
       </section>
 
       <footer class="modal-footer">
-        <slot name="footer">
-          This is the default footer!
-        </slot>
-        <button type="button" class="btn-green" @click="close">
-          Close Modal
+        <slot name="footer"> </slot>
+        <button type="button" @click="close">
+          <i class="fa fa-close"></i> Close
         </button>
       </footer>
     </div>
@@ -60,10 +58,12 @@
 .modal-header {
   position: relative;
   border-bottom: 1px solid #eeeeee;
-  color: #4aae9b;
-  justify-content: space-between;
+  color: var(--second-color);
+  justify-content: flex-start;
 }
-
+.modal-header i {
+  margin-right: 1rem;
+}
 .modal-footer {
   border-top: 1px solid #eeeeee;
   flex-direction: column;
@@ -81,23 +81,37 @@
   right: 0;
   border: none;
   font-size: 1.5rem;
-  padding: 1rem;
+  padding: 0;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
   cursor: pointer;
   font-weight: bold;
-  color: #4aae9b;
+  color: var(--second-color);
   background: transparent;
 }
+.btn-close:hover {
+  opacity: 0.8;
+}
 
-.btn-green {
+.modal-footer button {
   color: white;
-  background: #4aae9b;
-  border: 1px solid #4aae9b;
+  background: var(--second-color);
+  border: 1px solid var(--first-color);
   border-radius: 2px;
+  padding: 0.5rem 0;
 }
 ul.default-list {
   list-style-type: disc;
   margin-left: 2rem;
   line-height: 1.5rem;
+}
+span.badge {
+  color: white;
+  background: var(--second-color);
+  border: 1px solid var(--first-color);
+  border-radius: 1rem;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.6rem;
 }
 </style>
 

@@ -37,6 +37,8 @@
 
     <Skills />
 
+    <ProfessionalExp />
+
     <article id="comingsoon" class="outline">
       <h3>Want more? Coming soon...</h3>
     </article>
@@ -53,10 +55,12 @@
 <script>
 import SocialNetworks from "../components/SocialNetworks";
 import Skills from "../components/Skills";
+import ProfessionalExp from "../components/ProfessionalExp";
 export default {
   components: {
     SocialNetworks,
-    Skills
+    Skills,
+    ProfessionalExp
   },
   mounted() {
     window.dataLayer = window.dataLayer || [];

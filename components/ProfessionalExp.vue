@@ -7,7 +7,7 @@
 
       <div>
         <h6>Fullstack Developer</h6>
-        <h7><i class="fa fa-calendar-alt"></i> Since <time datetime="2018-07">Jul 2018</time></h7>
+        <span><i class="fa fa-calendar-alt"></i> Since <time datetime="2018-07">Jul 2018</time></span>
         <p>
           Banco Votorantim (banco BV) is a mid-size bank from Brasil with strong
           presence in finance and loans.
@@ -31,9 +31,9 @@
 
       <div>
         <h6>Frontend Engineer</h6>
-        <h7
+        <span
           ><i class="fa fa-calendar-alt"></i> <time datetime="2010-01">Jan 2010</time> to
-          <time datetime="2018-08">Jun 2018</time></h7
+          <time datetime="2018-08">Jun 2018</time></span
         >
         <p>
           As a frontend engineer, my main task was to build, maintain, evolve
@@ -48,9 +48,9 @@
 
       <div>
         <h6>Frontend Developer</h6>
-        <h7
+        <span
           ><i class="fa fa-calendar-alt"></i> <time datetime="2005-02">Feb 2005</time> to
-          <time datetime="2010-01">Jan 2010</time></h7
+          <time datetime="2010-01">Jan 2010</time></span
         >
         <p>
           As the senior frontend developer in the team, I was responsible for
@@ -67,8 +67,8 @@
 
       <div>
         <h6>Fullstack Developer</h6>
-        <h7><i class="fa fa-calendar-alt"></i> <time datetime="2007">2007</time> to
-          <time datetime="2016">2016</time></h7>
+        <span><i class="fa fa-calendar-alt"></i> <time datetime="2007">2007</time> to
+          <time datetime="2016">2016</time></span>
         <p>
           Fullstack developer; front and backend development for web projects.
         </p>
@@ -80,8 +80,8 @@
 
       <div>
         <h6>Fullstack Developer</h6>
-        <h7><i class="fa fa-calendar-alt"></i> <time datetime="2003">2003</time> to
-          <time datetime="2004">2004</time></h7>
+        <span><i class="fa fa-calendar-alt"></i> <time datetime="2003">2003</time> to
+          <time datetime="2004">2004</time></span>
         <p>
           C++ Builder developer.
         </p>
@@ -131,7 +131,7 @@ h6 {
     font-size: 1.25rem;
     margin-top: 1rem;
 }
-h7 {
+span {
     font-size: 0.75rem;
 }
 </style>

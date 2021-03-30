@@ -49,6 +49,62 @@
         ain’t getting them. <span> - Christopher McDougall</span>"
       </blockquote>
     </article>
+
+    <button type="button" class="btn" @click="showModal">
+      Open Modal!
+    </button>
+
+    <Modal v-show="isModalVisible" @close="closeModal">
+      <template v-slot:body>
+        <ul class="default-list">
+          <li>AWS Serverless APIs & Apps - A Complete Introduction (Udemy)</li>
+          <li>Borland C++ Builder (Senai)</li>
+          <li>Dart - Beginners Course (Udemy)</li>
+          <li>
+            Desenvolvimento Ágil Ruby on Rails 3 (Caelum) Course numberRR-71
+          </li>
+          <li>
+            Developing Applications with GCP - App Deployment, Debugging, and
+            Performance (Coursera)
+          </li>
+          <li>
+            Developing Applications with GCP: Getting Started With Application
+            Development (Coursera)
+          </li>
+          <li>
+            Developing Applications with GCP: Securing and Integrating
+            Components of your Application (Coursera)
+          </li>
+          <li>Flutter - Advanced (Udemy)</li>
+          <li>Flutter - Intermediate (Udemy)</li>
+          <li>
+            Google Cloud Platform Fundamentals: Core Infrastructure (Coursera)
+          </li>
+          <li>GraphQL Apollo Server with Node.js, MongoDB (Udemy)</li>
+          <li>
+            How to design & develop REST microservices in Golang / Go (Udemy)
+          </li>
+          <li>JAVA e Orientação a Objetos (Caelum) Course numberFJ-11</li>
+          <li>Mastering Visual Basic 6.0 Development (KA Solutions)</li>
+          <li>Modern Erlang for Beginners - Udemy</li>
+          <li>Mongo DB : All About MongoDB (Udemy)</li>
+          <li>
+            NestJS Zero to Hero - Modern TypeScript Back-end Development (Udemy)
+          </li>
+          <li>PHP Essentials (Senac)</li>
+          <li>React Styled Components</li>
+          <li>
+            Redis Bootcamp for Beginners: Get Hands On with Redis 5 (Udemy)
+          </li>
+          <li>Securing Applications in Node.js (Udemy)</li>
+          <li>
+            The Complete Flutter App Development Course for Android, iOS (Udemy)
+          </li>
+          <li>The Go Programming Language Tutorial - Volume 1</li>
+          <li>Ultimate Kubernetes Fast-Track Beginner to Advanced (Udemy)</li>
+        </ul>
+      </template>
+    </Modal>
   </section>
 </template>
 
@@ -56,11 +112,26 @@
 import SocialNetworks from "../components/SocialNetworks";
 import Skills from "../components/Skills";
 import ProfessionalExp from "../components/ProfessionalExp";
+import Modal from "../components/Modal.vue";
 export default {
   components: {
     SocialNetworks,
     Skills,
-    ProfessionalExp
+    ProfessionalExp,
+    Modal
+  },
+  data() {
+    return {
+      isModalVisible: false
+    };
+  },
+  methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
   },
   mounted() {
     window.dataLayer = window.dataLayer || [];

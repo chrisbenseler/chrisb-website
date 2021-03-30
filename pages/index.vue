@@ -165,7 +165,12 @@ export default {
     }
   },
   mounted() {
+
+    if(window.location && window.location.toString().indexOf("http://localhost") >= 0)
+      return;
     window.dataLayer = window.dataLayer || [];
+    
+    
     function gtag() {
       dataLayer.push(arguments);
     }

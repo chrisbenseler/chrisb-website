@@ -4,70 +4,64 @@
 
     <div>
       <a
-        href="https://github.com/chrisbenseler"
+        v-for="item in networks"
+        :key="item.url"
         rel="noopener"
         target="_blank"
-        title="GitHub"
+        :url="item.url"
       >
-        <i class="fab fa-github"></i>
-        /chrisbenseler
-      </a>
-
-      <a
-        href="https://twitter.com/chrisbenseler"
-        rel="noopener"
-        target="_blank"
-        title="Twitter"
-      >
-        <i class="fab fa-twitter"></i>
-        /chrisbenseler
-      </a>
-
-      <a
-        href="https://medium.com/@chrisbenseler"
-        rel="noopener"
-        target="_blank"
-        title="Medium"
-      >
-        <i class="fab fa-medium"></i>
-        /@chrisbenseler
-      </a>
-
-      <a
-        href="https://instagram.com/chrisbenseler"
-        rel="noopener"
-        target="_blank"
-        title="Instagram"
-      >
-        <i class="fab fa-stack-overflow"></i>
-        /users/640053/christian-benseler
-      </a>
-
-      <a
-        href="https://instagram.com/chrisbenseler"
-        rel="noopener"
-        target="_blank"
-        title="Instagram"
-      >
-        <i class="fab fa-instagram"></i>
-        /chrisbenseler
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/christian-benseler-84732334/"
-        rel="noopener"
-        target="_blank"
-        title="Linked In"
-      >
-        <i class="fab fa-linkedin-in"></i>
-        /christian-benseler-84732334
+        <i :class="item.icon"></i>
+        /{{ item.label }}
       </a>
     </div>
   </article>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      networks: [
+        {
+          url: "https://github.com/chrisbenseler",
+          title: "GitHub",
+          icon: "fab fa-github",
+          label: "/chrisbenseler"
+        },
+        {
+          url: "https://twitter.com/chrisbenseler",
+          title: "Twitter",
+          icon: "fab fa-twitter",
+          label: "@chrisbenseler"
+        },
+        {
+          url: "https://medium.com/@chrisbenseler",
+          title: "Medium",
+          icon: "fab fa-medium",
+          label: "/@chrisbenseler"
+        },
+        {
+          url: "https://stackoverflow.com/users/640053/christian-benseler",
+          title: "Stack Overflow",
+          icon: "fab fa-stack-overflow",
+          label: "/users/640053/christian-benseler"
+        },
+        {
+          url: "https://instagram.com/chrisbenseler",
+          title: "Instagram",
+          icon: "fab fa-instagram",
+          label: "/chrisbenseler"
+        },
+        {
+          url: "https://www.linkedin.com/in/christian-benseler-84732334",
+          title: "Linked In",
+          icon: "fab fa-linkedin-in",
+          label: "/in/christian-benseler-84732334"
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style scoped>

@@ -40,7 +40,7 @@
     <ProfessionalExp />
 
     <div id="actions">
-      <button @click="showModal" tirle="Courses">
+      <button @click="showModal" title="Courses">
         <i class="fa fa-chalkboard-teacher"></i> Courses
       </button>
     </div>

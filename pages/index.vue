@@ -40,10 +40,44 @@
     <ProfessionalExp />
 
     <div id="actions">
-      <button @click="showModal" title="Courses">
+      <button
+        @click="
+          () => {
+            showModal('courses');
+          }
+        "
+        title="Courses"
+      >
         <i class="fa fa-chalkboard-teacher"></i> Courses
       </button>
+      <button
+        @click="
+          () => {
+            showModal('projects');
+          }
+        "
+        title="Projects"
+      >
+        <i class="fas fa-project-diagram"></i> Projects
+      </button>
     </div>
+
+    <CoursesModal
+      v-bind:visible="isModalVisible.courses"
+      @close="
+        () => {
+          closeModal('courses');
+        }
+      "
+    />
+    <ProjectsModal
+      v-bind:visible="isModalVisible.projects"
+      @close="
+        () => {
+          closeModal('projects');
+        }
+      "
+    />
 
     <article id="comingsoon" class="outline">
       <h3>Want more? Coming soon...</h3>
@@ -55,8 +89,6 @@
         ain’t getting them. <span> - Christopher McDougall</span>"
       </blockquote>
     </article>
-    <CoursesModal v-bind:visible="isModalVisible" @close="closeModal" />
-    
   </section>
 </template>
 
@@ -65,33 +97,39 @@ import SocialNetworks from "../components/SocialNetworks";
 import Skills from "../components/Skills";
 import ProfessionalExp from "../components/ProfessionalExp";
 import CoursesModal from "../components/modals/Courses.vue";
+import ProjectsModal from "../components/modals/Projects.vue";
 export default {
   components: {
     SocialNetworks,
     Skills,
     ProfessionalExp,
-    CoursesModal
+    CoursesModal,
+    ProjectsModal
   },
   data() {
     return {
-      isModalVisible: false
+      isModalVisible: {
+        courses: false,
+        projects: false
+      }
     };
   },
   methods: {
-    showModal() {
-      this.isModalVisible = true;
+    showModal(key) {
+      this.isModalVisible[key] = true;
     },
-    closeModal() {
-      this.isModalVisible = false;
+    closeModal(key) {
+      this.isModalVisible[key] = false;
     }
   },
   mounted() {
-
-    if(window.location && window.location.toString().indexOf("http://localhost") >= 0)
+    if (
+      window.location &&
+      window.location.toString().indexOf("http://localhost") >= 0
+    )
       return;
     window.dataLayer = window.dataLayer || [];
-    
-    
+
     function gtag() {
       dataLayer.push(arguments);
     }
@@ -173,6 +211,9 @@ article#overview div p {
 #actions {
   padding: 2rem 1rem 0;
   border-top: 3px solid var(--second-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 #actions button i {
   font-size: 1.5rem;

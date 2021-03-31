@@ -47,6 +47,7 @@
   display: flex;
   flex-direction: column;
   max-height: 100%;
+  max-width: 710px;
 }
 
 .modal-header,

@@ -35,6 +35,16 @@
           </li>
 
           <li>
+            <h5>Snake game</h5>
+            <p>Plain html + css + js</p>
+            <a href="https://chrisbenseler.github.io/snakeweb/" target="_blank" rel="noopener" title="Snake game">
+              <i class="fas link"></i> See
+            </a>
+            <span class="badge">Personal</span>
+          </li>
+
+
+          <li>
             <h5>Reserva de salas e equipamentos</h5>
             <p>Ruby on Rails webapp.</p>
             <a href="https://www.mmcafe.com.br/reserva-de-salas-e-equipamentos/" target="_blank" rel="noopener" title="Reserva de salas e equipamentos">

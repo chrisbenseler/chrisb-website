@@ -117,6 +117,9 @@ export default {
 </script>
 
 <style scoped>
+#professionalexp {
+  padding: 0 1rem;
+}
 h4 {
   font-size: 2rem;
   color: var(--fourth-color);

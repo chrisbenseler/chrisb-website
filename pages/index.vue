@@ -3,7 +3,7 @@
     <header class="outline">
       <h1>Christian Benseler</h1>
       <h2>
-        Fullstack developer, passionate sports practitioner, 80/90's rock fan
+        Fullstack & frontend developer, passionate sports practitioner, 80/90's rock fan
       </h2>
     </header>
 
@@ -12,7 +12,7 @@
 
       <div>
         <p>
-          Hi! I'm a fullstack developer - based in São Paulo, Brazil - and I
+          Hi! I'm a fullstack & frontend developer - based in São Paulo, Brazil - and I
           have been working with software development focused on internet since
           2005.
         </p>

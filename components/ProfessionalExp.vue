@@ -3,11 +3,30 @@
     <h4><i class="fa fa-code-branch"></i>Professional Experience</h4>
 
     <article>
+      <h5>Farm Investimentos</h5>
+
+      <div>
+        <h6>Tech Lead - Frontend</h6>
+        <span><i class="fa fa-calendar-alt"></i> Since <time datetime="2021-04">Apr 2021</time></span>
+        <p>
+          Financial solutions for the Agribusiness' supply chain 
+        </p>
+        <p>
+          Tech Lead of the frontend team.
+        </p>
+        <p>
+          Main stack: VueJS
+        </p>
+      </div>
+    </article>
+
+    <article>
       <h5>banco BV</h5>
 
       <div>
         <h6>Fullstack Developer</h6>
-        <span><i class="fa fa-calendar-alt"></i> Since <time datetime="2018-07">Jul 2018</time></span>
+        <span><i class="fa fa-calendar-alt"></i><time datetime="2018-07">Jul 2018</time>  to
+          <time datetime="2021-04">Apr 2021</time></span>
         <p>
           Banco Votorantim (banco BV) is a mid-size bank from Brasil with strong
           presence in finance and loans.

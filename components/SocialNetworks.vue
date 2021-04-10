@@ -8,7 +8,7 @@
         :key="item.url"
         rel="noopener"
         target="_blank"
-        :url="item.url"
+        :href="item.url"
       >
         <i :class="item.icon"></i>
         /{{ item.label }}

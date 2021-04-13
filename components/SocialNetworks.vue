@@ -11,7 +11,7 @@
         :href="item.url"
       >
         <i :class="item.icon"></i>
-        /{{ item.label }}
+        {{ item.label }}
       </a>
     </div>
   </article>

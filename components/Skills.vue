@@ -10,7 +10,7 @@
           <li>HTML/CSS <SkillRate :rate="4" /></li>
           <li>jQuery <SkillRate :rate="5" /></li>
           <li>React <SkillRate :rate="3" /></li>
-          <li>Vue <SkillRate :rate="2" /></li>
+          <li>Vue <SkillRate :rate="3" /></li>
         </ul>
       </div>
 

@@ -2,18 +2,12 @@
   <div class="modal-backdrop">
     <div class="modal">
       <header class="modal-header">
-        <slot name="header">
-          This is the default title!
-        </slot>
-        <button type="button" class="btn-close" @click="close">
-          x
-        </button>
+        <slot name="header"> This is the default title! </slot>
+        <button type="button" class="btn-close" @click="close">x</button>
       </header>
 
       <section class="modal-body">
-        <slot name="body">
-          This is the default body!
-        </slot>
+        <slot name="body"> This is the default body! </slot>
       </section>
 
       <footer class="modal-footer">
@@ -26,7 +20,7 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -43,10 +37,10 @@
   background: #ffffff;
   box-sizing: border-box;
   box-shadow: 2px 2px 20px 1px;
-  overflow-x: auto;
+  
   display: flex;
   flex-direction: column;
-  max-height: 100%;
+  max-height: calc(100% - 2rem);
   max-width: 710px;
 }
 
@@ -74,6 +68,13 @@
 .modal-body {
   position: relative;
   padding: 2rem;
+  overflow-x: auto;
+
+  ul li {
+    border-bottom: 1px solid var(--fourth-color);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 .btn-close {
@@ -114,6 +115,18 @@ span.badge {
   padding: 0.1rem 0.5rem;
   font-size: 0.6rem;
 }
+.link-project {
+  color: var(--second-color);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal {
+    max-height: calc(100%);
+    max-width: 100%;
+  }
+}
 </style>
 
 <script>
@@ -122,7 +135,7 @@ export default {
   methods: {
     close() {
       this.$emit("close");
-    }
-  }
+    },
+  },
 };
 </script>

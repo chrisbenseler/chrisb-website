@@ -12,7 +12,7 @@
 
       <div>
         <p>
-          Hi! I'm a fullstack & frontend developer - based in São Paulo, Brazil - and I
+          Hi! I'm a fullstack & frontend developer - born in Brazil an currently living in Lisbon, Portugal - and I
           have been working with software development focused on internet since
           2005.
         </p>

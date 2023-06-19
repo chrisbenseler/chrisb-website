@@ -6,11 +6,11 @@
       <div>
         <h5><i class="fa fa-desktop"></i>Frontend</h5>
         <ul>
-          <li>Angular <SkillRate :rate="5" /></li>
+          <li>Angular <SkillRate :rate="4" /></li>
           <li>HTML/CSS <SkillRate :rate="4" /></li>
           <li>jQuery <SkillRate :rate="5" /></li>
           <li>React <SkillRate :rate="3" /></li>
-          <li>Vue <SkillRate :rate="3" /></li>
+          <li>Vue <SkillRate :rate="5" /></li>
         </ul>
       </div>
 

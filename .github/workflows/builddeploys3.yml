@@ -11,14 +11,12 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@main
 
-      - name: Cache node modules
-        uses: actions/cache@v1
+      - uses: actions/setup-node@v3
         with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-build-
-            ${{ runner.OS }}-
+          # Version Spec of the version to use in SemVer notation.
+          # It also emits such aliases as lts, latest, nightly and canary builds
+          # Examples: 12.x, 10.15.1, >=10.15.0, lts/Hydrogen, 16-nightly, latest, node
+          node-version: '12'
 
       - name: Install
         run: npm install

@@ -1,13 +1,28 @@
 <template>
   <section id="professionalexp">
     <h4><i class="fa fa-code-branch"></i>Professional Experience</h4>
+    <article>
+      <h5>Gympass</h5>
+
+      <div>
+        <h6>Software Engineer</h6>
+        <span><i class="fa fa-calendar-alt"></i> Since <time datetime="2023-06">Jun 2023</time></span>
+        <p>
+          Corporate wellbeing platform 
+        </p>
+        <p>
+          Software engineer in the Billing & Payment's team, focused on frontend.
+        </p>
+      </div>
+    </article>
 
     <article>
-      <h5>Farm Investimentos</h5>
+      <h5>Farm Tech</h5>
 
       <div>
         <h6>Tech Lead - Frontend</h6>
-        <span><i class="fa fa-calendar-alt"></i> Since <time datetime="2021-04">Apr 2021</time></span>
+       <span><i class="fa fa-calendar-alt"></i><time datetime="2021-04">Apr 2021</time>  to
+          <time datetime="2023-05">Mai 2025</time></span>
         <p>
           Financial solutions for the Agribusiness' supply chain 
         </p>

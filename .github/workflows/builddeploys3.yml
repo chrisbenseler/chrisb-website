@@ -16,7 +16,7 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Install
-        run: npm ci
+        run: npm install
 
       #- name: Lint
       #  run: npm run lint
@@ -35,6 +35,6 @@ jobs:
           aws s3 cp \
             --recursive \
             --region sa-east-1 \
-            ./.output/public s3://${{ secrets.AWS_BUCKET_NAME }}
+            ./dist s3://${{ secrets.AWS_BUCKET_NAME }}
 
       

@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
-        uses: actions/checkout@main
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
 
       - name: Install
-        run: npm install
+        run: npm ci
 
       #- name: Lint
       #  run: npm run lint
@@ -35,6 +35,6 @@ jobs:
           aws s3 cp \
             --recursive \
             --region sa-east-1 \
-            ./dist s3://${{ secrets.AWS_BUCKET_NAME }}
+            ./.output/public s3://${{ secrets.AWS_BUCKET_NAME }}
 
       

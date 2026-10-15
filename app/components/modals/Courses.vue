@@ -83,24 +83,8 @@
   </div>
 </template>
 
-<script>
-import Modal from "../Modal.vue";
-export default {
-  components: {
-    Modal
-  },
-
-  props: {
-    visible: {
-      type: Boolean,
-      default: false
-    }
-  },
-
-  methods: {
-    closeModal() {
-      this.$emit("close");
-    }
-  }
-};
+<script setup lang="ts">
+withDefaults(defineProps<{ visible?: boolean }>(), { visible: false });
+const emit = defineEmits<{ close: [] }>();
+const closeModal = () => emit("close");
 </script>

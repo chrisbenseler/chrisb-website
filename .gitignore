@@ -88,3 +88,9 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Nuxt
+.output
+.data
+.nitro
+.fleet

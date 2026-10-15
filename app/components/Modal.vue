@@ -129,13 +129,7 @@ span.badge {
 }
 </style>
 
-<script>
-export default {
-  name: "Modal",
-  methods: {
-    close() {
-      this.$emit("close");
-    },
-  },
-};
+<script setup lang="ts">
+const emit = defineEmits<{ close: [] }>();
+const close = () => emit("close");
 </script>

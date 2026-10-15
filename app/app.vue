@@ -3,18 +3,19 @@
     <header class="outline">
       <h1>Christian Benseler</h1>
       <h2>
-        Fullstack & frontend developer, passionate sports practitioner, 80/90's rock fan
+        Fullstack & frontend developer, passionate sports practitioner, 80/90's
+        rock fan
       </h2>
     </header>
 
     <article id="overview">
-      <!-- <img src="face.jpeg" alt="Christian Benseler" /> -->
+      <img src="/face.jpeg" alt="Christian Benseler" />
 
       <div>
         <p>
-          Hi! I'm a fullstack & frontend developer - born in Brazil an currently living in Lisbon, Portugal - and I
-          have been working with software development focused on internet since
-          2005.
+          Hi! I'm a fullstack & frontend developer - born in Brazil an currently
+          living in Lisbon, Portugal - and I have been working with software
+          development focused on internet since 2005.
         </p>
         <p>
           For me, technology is one of many tools used to achieve a greater
@@ -32,51 +33,26 @@
         </p>
       </div>
     </article>
-
     <SocialNetworks />
-
     <Skills />
-
     <ProfessionalExp />
 
     <div id="actions">
-      <button
-        @click="
-          () => {
-            showModal('courses');
-          }
-        "
-        title="Courses"
-      >
+      <button @click="showModal('courses')" title="Courses">
         <i class="fa fa-chalkboard-teacher"></i> Courses
       </button>
-      <button
-        @click="
-          () => {
-            showModal('projects');
-          }
-        "
-        title="Projects"
-      >
+      <button @click="showModal('projects')" title="Projects">
         <i class="fas fa-project-diagram"></i> Projects
       </button>
     </div>
 
-    <CoursesModal
-      v-bind:visible="isModalVisible.courses"
-      @close="
-        () => {
-          closeModal('courses');
-        }
-      "
+    <ModalsCourses
+      :visible="isModalVisible.courses"
+      @close="closeModal('courses')"
     />
-    <ProjectsModal
-      v-bind:visible="isModalVisible.projects"
-      @close="
-        () => {
-          closeModal('projects');
-        }
-      "
+    <ModalsProjects
+      :visible="isModalVisible.projects"
+      @close="closeModal('projects')"
     />
 
     <article id="comingsoon" class="outline">
@@ -92,10 +68,30 @@
   </section>
 </template>
 <script setup lang="ts">
-const isModalVisible = ref({
+type ModalKey = "courses" | "projects";
+
+const isModalVisible = ref<Record<ModalKey, boolean>>({
   courses: false,
   projects: false,
-})
+});
+const showModal = (key: ModalKey) => {
+  isModalVisible.value[key] = true;
+};
+const closeModal = (key: ModalKey) => {
+  isModalVisible.value[key] = false;
+};
+
+onMounted(() => {
+  if (window.location.hostname === "localhost") return;
+  const w = window as typeof window & { dataLayer: unknown[] };
+  w.dataLayer = w.dataLayer || [];
+  function gtag(..._args: unknown[]) {
+    // gtag.js expects the arguments object itself, not an array
+    w.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-Q0BYEJF81T");
+});
 </script>
 <style>
 *,

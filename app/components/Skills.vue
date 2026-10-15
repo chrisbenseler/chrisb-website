@@ -52,15 +52,6 @@
   </article>
 </template>
 
-<script>
-import SkillRate from "./SkillRate";
-export default {
-  components: {
-    SkillRate
-  }
-};
-</script>
-
 <style scoped>
 #skills {
   padding: 0 1rem;

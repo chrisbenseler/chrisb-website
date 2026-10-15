@@ -125,12 +125,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  components: {}
-};
-</script>
-
 <style scoped>
 #professionalexp {
   padding: 0 1rem;

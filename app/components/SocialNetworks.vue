@@ -17,51 +17,45 @@
   </article>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      networks: [
-        {
-          url: "https://github.com/chrisbenseler",
-          title: "GitHub",
-          icon: "fab fa-github",
-          label: "/chrisbenseler"
-        },
-        {
-          url: "https://twitter.com/chrisbenseler",
-          title: "Twitter",
-          icon: "fab fa-twitter",
-          label: "@chrisbenseler"
-        },
-        {
-          url: "https://medium.com/@chrisbenseler",
-          title: "Medium",
-          icon: "fab fa-medium",
-          label: "/@chrisbenseler"
-        },
-        {
-          url: "https://stackoverflow.com/users/640053/christian-benseler",
-          title: "Stack Overflow",
-          icon: "fab fa-stack-overflow",
-          label: "/users/640053/christian-benseler"
-        },
-        {
-          url: "https://instagram.com/chrisbenseler",
-          title: "Instagram",
-          icon: "fab fa-instagram",
-          label: "/chrisbenseler"
-        },
-        {
-          url: "https://www.linkedin.com/in/christian-benseler-84732334",
-          title: "Linked In",
-          icon: "fab fa-linkedin-in",
-          label: "/in/christian-benseler-84732334"
-        }
-      ]
-    };
-  }
-};
+<script setup lang="ts">
+const networks = [
+  {
+    url: "https://github.com/chrisbenseler",
+    title: "GitHub",
+    icon: "fab fa-github",
+    label: "/chrisbenseler",
+  },
+  {
+    url: "https://twitter.com/chrisbenseler",
+    title: "Twitter",
+    icon: "fab fa-twitter",
+    label: "@chrisbenseler",
+  },
+  {
+    url: "https://medium.com/@chrisbenseler",
+    title: "Medium",
+    icon: "fab fa-medium",
+    label: "/@chrisbenseler",
+  },
+  {
+    url: "https://stackoverflow.com/users/640053/christian-benseler",
+    title: "Stack Overflow",
+    icon: "fab fa-stack-overflow",
+    label: "/users/640053/christian-benseler",
+  },
+  {
+    url: "https://instagram.com/chrisbenseler",
+    title: "Instagram",
+    icon: "fab fa-instagram",
+    label: "/chrisbenseler",
+  },
+  {
+    url: "https://www.linkedin.com/in/christian-benseler-84732334",
+    title: "Linked In",
+    icon: "fab fa-linkedin-in",
+    label: "/in/christian-benseler-84732334",
+  },
+];
 </script>
 
 <style scoped>

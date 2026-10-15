@@ -3,18 +3,13 @@
     <span
       v-for="item in [1, 2, 3, 4, 5]"
       :key="item"
-      v-bind:class="{ active: item <= rate }"
-      >{{
-    }}</span>
+      :class="{ active: item <= rate }"
+    ></span>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    rate: Number
-  }
-};
+<script setup lang="ts">
+defineProps<{ rate: number }>();
 </script>
 
 <style scoped>

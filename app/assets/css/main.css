@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Lexend", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand burgundy (#651e3e = 800) */
+  --color-accent-50: #fbf3f6;
+  --color-accent-100: #f6e6ec;
+  --color-accent-200: #eecdd9;
+  --color-accent-300: #e0a6bb;
+  --color-accent-400: #cc7495;
+  --color-accent-500: #b44e76;
+  --color-accent-600: #9a385d;
+  --color-accent-700: #7f2b4b;
+  --color-accent-800: #651e3e;
+  --color-accent-900: #4f1831;
+  --color-accent-950: #2e0b1b;
+}
+
+@layer base {
+  html {
+    @apply scroll-pt-20 antialiased;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-white font-sans text-zinc-700 dark:bg-zinc-950 dark:text-zinc-300;
+  }
+
+  ::selection {
+    @apply bg-accent-200 text-accent-950 dark:bg-accent-800 dark:text-white;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-600 dark:outline-accent-300;
+  }
+}
+
+@layer components {
+  .section {
+    @apply border-t border-zinc-200/70 py-16 sm:py-20 dark:border-zinc-800/70;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-0.5 text-xs font-medium text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400;
+  }
+}
+
+/* Sections fade in as they scroll into view (CSS scroll-driven animations,
+   progressive enhancement: browsers without support simply show the content). */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    translate: 0 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+    }
+  }
+}

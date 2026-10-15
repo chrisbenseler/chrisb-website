@@ -1,24 +1,45 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   components: true,
+  modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxtjs/color-mode'],
+  css: ['~/assets/css/main.css'],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  colorMode: {
+    classSuffix: '',
+    preference: 'system',
+    fallback: 'light',
+  },
+  fonts: {
+    families: [
+      { name: 'Inter', provider: 'google', weights: [400, 500, 600] },
+      { name: 'Lexend', provider: 'google', weights: [400, 600, 700] },
+    ],
+  },
+  icon: {
+    serverBundle: { collections: ['lucide', 'simple-icons'] },
+    // Bundle every icon referenced in components and data files so the static
+    // build never has to call the Iconify API at runtime.
+    clientBundle: {
+      scan: { globInclude: ['app/**/*.{vue,ts}'] },
+    },
+  },
   app: {
     head: {
-      title: 'Christian Benseler',
       htmlAttrs: {
         lang: 'en'
       },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Christian Benseler website' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel:"stylesheet", type:"text/css", href:'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' },
-        { rel:"stylesheet", type:"text/css", href:'https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;700&display=swap' },
-        { rel:"stylesheet", type:"text/css", href:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' }
       ],
       script: [
         {
